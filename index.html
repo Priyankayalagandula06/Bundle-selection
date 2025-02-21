@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Bundle Boxes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Sunshine Collection</h1>
+      <div class="promo-badge">FLASH SALE TODAY!</div>
+    </div>
+
+    <div id="bundle1" class="bundle-option">
+      <div class="bundle-header" onclick="toggleExpand('bundle1')">
+        <div class="radio-container">
+          <input type="radio" name="bundle" id="radio1" onclick="selectBundle('bundle1')">
+        </div>
+        <div class="bundle-details">
+          <div class="bundle-title">Starter Pack</div>
+          <div class="price-container">
+            <div class="current-price">$29.99</div>
+            <div class="original-price">$39.99</div>
+            <span class="discount-badge">25% OFF</span>
+          </div>
+        </div>
+      </div>
+      <div class="options-container">
+        <div class="option-row">
+          <div class="option-label">#1</div>
+          <div class="option-selects">
+            <select id="size1-1">
+              <option value="xs">XS</option>
+              <option value="s" selected>S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <select id="color1-1">
+              <option value="black" selected>Black</option>
+              <option value="white">White</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="cart-button">Add to Cart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
