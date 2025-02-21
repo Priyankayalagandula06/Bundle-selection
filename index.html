@@ -12,7 +12,7 @@
       <h1>Sunshine Collection</h1>
       <div class="promo-badge">FLASH SALE TODAY!</div>
     </div>
-
+    
     <div id="bundle1" class="bundle-option">
       <div class="bundle-header" onclick="toggleExpand('bundle1')">
         <div class="radio-container">
@@ -48,8 +48,149 @@
         </div>
       </div>
     </div>
-
-    <button class="cart-button">Add to Cart</button>
+    
+    <div id="bundle2" class="bundle-option">
+      <div class="bundle-header" onclick="toggleExpand('bundle2')">
+        <div class="radio-container">
+          <input type="radio" name="bundle" id="radio2" onclick="selectBundle('bundle2')">
+        </div>
+        <div class="bundle-details">
+          <div class="bundle-title">Perfect Pair</div>
+          <div class="price-container">
+            <div class="current-price">$49.99</div>
+            <div class="original-price">$79.99</div>
+            <span class="discount-badge">38% OFF</span>
+          </div>
+        </div>
+        <div class="popular-badge">BEST SELLER</div>
+      </div>
+      <div class="options-container">
+        <div class="option-row">
+          <div class="option-label">#1</div>
+          <div class="option-selects">
+            <select id="size2-1">
+              <option value="xs">XS</option>
+              <option value="s" selected>S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <select id="color2-1">
+              <option value="black" selected>Black</option>
+              <option value="white">White</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+        </div>
+        <div class="option-row">
+          <div class="option-label">#2</div>
+          <div class="option-selects">
+            <select id="size2-2">
+              <option value="xs">XS</option>
+              <option value="s" selected>S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <select id="color2-2">
+              <option value="black">Black</option>
+              <option value="white" selected>White</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="bundle3" class="bundle-option">
+      <div class="bundle-header" onclick="toggleExpand('bundle3')">
+        <div class="radio-container">
+          <input type="radio" name="bundle" id="radio3" onclick="selectBundle('bundle3')">
+        </div>
+        <div class="bundle-details">
+          <div class="bundle-title">Ultimate Collection</div>
+          <div class="price-container">
+            <div class="current-price">$69.99</div>
+            <div class="original-price">$119.99</div>
+            <span class="discount-badge">42% OFF</span>
+          </div>
+        </div>
+      </div>
+      <div class="options-container">
+        <div class="option-row">
+          <div class="option-label">#1</div>
+          <div class="option-selects">
+            <select id="size3-1">
+              <option value="xs">XS</option>
+              <option value="s" selected>S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <select id="color3-1">
+              <option value="black" selected>Black</option>
+              <option value="white">White</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+        </div>
+        <div class="option-row">
+          <div class="option-label">#2</div>
+          <div class="option-selects">
+            <select id="size3-2">
+              <option value="xs">XS</option>
+              <option value="s" selected>S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <select id="color3-2">
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="blue" selected>Blue</option>
+              <option value="red">Red</option>
+            </select>
+          </div>
+        </div>
+        <div class="option-row">
+          <div class="option-label">#3</div>
+          <div class="option-selects">
+            <select id="size3-3">
+              <option value="xs">XS</option>
+              <option value="s">S</option>
+              <option value="m" selected>M</option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+            </select>
+            <select id="color3-3">
+              <option value="black">Black</option>
+              <option value="white">White</option>
+              <option value="blue">Blue</option>
+              <option value="red" selected>Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="shipping">Free Express Shipping</div>
+      <div class="total">Total: $49.99</div>
+    </div>
+    
+    <button class="cart-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      Add to Cart
+    </button>
+    
+    <div class="powered-by">Powered by Sunshine Shop</div>
   </div>
 
   <script src="script.js"></script>
