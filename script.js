@@ -1,31 +1,56 @@
 function toggleExpand(bundleId) {
-    let bundle = document.getElementById(bundleId);
-    let options = bundle.querySelector('.options-container');
-  
-    if (bundle.classList.contains('expanded')) {
-      options.style.maxHeight = '0';
-      options.style.opacity = '0';
-      bundle.classList.remove('expanded');
-    } else {
-      document.querySelectorAll('.bundle-option').forEach(b => {
-        b.classList.remove('expanded');
-        b.querySelector('.options-container').style.maxHeight = '0';
-        b.querySelector('.options-container').style.opacity = '0';
-      });
-      options.style.maxHeight = '300px';
-      options.style.opacity = '1';
-      bundle.classList.add('expanded');
+    const bundles = document.querySelectorAll('.bundle-option');
+    const clickedBundle = document.getElementById(bundleId);
+    
+    // If the bundle is already expanded, keep it that way
+    if (clickedBundle.classList.contains('expanded')) {
+      return;
     }
+    
+    // Collapse all bundles
+    bundles.forEach(bundle => {
+      bundle.classList.remove('expanded');
+    });
+    
+    // Expand the clicked bundle
+    clickedBundle.classList.add('expanded');
+    
+    // Select the radio button
+    const radioButton = clickedBundle.querySelector('input[type="radio"]');
+    radioButton.checked = true;
+    
+    // Update selected state for styling
+    selectBundle(bundleId);
   }
   
   function selectBundle(bundleId) {
-    document.querySelectorAll('.bundle-option').forEach(b => {
-      b.classList.remove('selected');
-      b.querySelector('input[type="radio"]').checked = false;
+    const bundles = document.querySelectorAll('.bundle-option');
+    
+    // Remove selected class from all bundles
+    bundles.forEach(bundle => {
+      bundle.classList.remove('selected');
     });
-  
-    let bundle = document.getElementById(bundleId);
-    bundle.classList.add('selected');
-    bundle.querySelector('input[type="radio"]').checked = true;
+    
+    // Add selected class to clicked bundle
+    const clickedBundle = document.getElementById(bundleId);
+    clickedBundle.classList.add('selected');
+    
+    // Update total price based on selected bundle
+    let totalPrice = "$29.99";
+    if (bundleId === 'bundle2') {
+      totalPrice = "$49.99";
+    } else if (bundleId === 'bundle3') {
+      totalPrice = "$69.99";
+    }
+    
+    document.querySelector('.total').textContent = `Total: ${totalPrice}`;
+    
+    // Expand the bundle to show options
+    clickedBundle.classList.add('expanded');
   }
   
+  // Initialize with middle bundle selected
+  window.onload = function() {
+    selectBundle('bundle2');
+    toggleExpand('bundle2');
+  };
